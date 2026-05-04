@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Bootstrap -->
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+  >
+
+  <!-- Font Awesome -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+  >
+
+  <!-- External CSS -->
+  <link rel="stylesheet" href="css/style.css">
+
+  <title>Contact | Accessories Shop</title>
+</head>
+
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm">
+    <div class="container">
+
+      <a class="navbar-brand fw-bold" href="index.html">
+        Accessories Shop ✨
+      </a>
+
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#navbarNav"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">Home</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="about.html">About</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link active" href="contact.html">Contact</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="cart.html">Cart</a>
+          </li>
+
+        </ul>
+      </div>
+
+    </div>
+  </nav>
+
+
+  <!-- HERO -->
+  <section class="contact-hero text-center">
+    <div class="container">
+
+      <h1>Find Your Style ✨</h1>
+
+      <p>
+        Tell us your vibe and we’ll suggest
+        the perfect accessories for you.
+      </p>
+
+    </div>
+  </section>
+
+
+  <!-- FORM SECTION -->
+  <section class="container my-5">
+
+    <div class="row justify-content-center">
+      <div class="col-md-7">
+
+        <div class="contact-card">
+
+          <form onsubmit="handleForm(event)">
+
+            <div class="mb-3">
+              <label>Your Name</label>
+              <input
+                type="text"
+                id="name"
+                class="form-control"
+                placeholder="Enter your name"
+                required
+              >
+            </div>
+
+            <div class="mb-3">
+              <label>Your Style</label>
+              <select id="style" class="form-select">
+                <option>Minimal</option>
+                <option>Elegant</option>
+                <option>Bold</option>
+              </select>
+            </div>
+
+            <div class="mb-4">
+              <label>Favorite Product</label>
+              <select id="product" class="form-select">
+                <option>Ring</option>
+                <option>Bracelet</option>
+                <option>Watch</option>
+                <option>Handbag</option>
+                <option>Hair Accessories</option>
+              </select>
+            </div>
+
+            <button type="submit" class="btn btn-dark w-100">
+              Get Suggestion
+            </button>
+
+          </form>
+
+          <p id="result" class="result-box"></p>
+
+        </div>
+
+      </div>
+    </div>
+
+  </section>
+
+
+  <!-- CONTACT INFO -->
+  <section class="container my-5">
+
+    <h2 class="text-center mb-4">Contact Info</h2>
+
+    <div class="row g-4">
+
+      <div class="col-md-4">
+        <div class="info-box text-center">
+          <i class="fa fa-envelope fa-lg"></i>
+          <h5>Email</h5>
+          <p>accessories@gmail.com</p>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="info-box text-center">
+          <i class="fa fa-phone fa-lg"></i>
+          <h5>Phone</h5>
+          <p>+93 700 123 456</p>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="info-box text-center">
+          <i class="fa fa-location-dot fa-lg"></i>
+          <h5>Location</h5>
+          <p>Herat, Afghanistan</p>
+        </div>
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+
+    <div class="container py-5">
+      <div class="text-center">
+        <p>© 2026 Accessories Shop | All Rights Reserved</p>
+      </div>
+    </div>
+
+  </footer>
+
+
+  <!-- JS -->
+  <script src="js/contact.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>

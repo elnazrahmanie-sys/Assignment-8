@@ -1,0 +1,566 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Bootstrap -->
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+  >
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="/css/style.css">
+
+  <title>Accessories Shop</title>
+</head>
+
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm">
+    <div class="container">
+
+      <a class="navbar-brand fw-bold" href="index.html">
+        Accessories Shop ✨
+      </a>
+
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#navbarNav"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+
+          <li class="nav-item">
+            <a class="nav-link active" href="index.html">Home</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="about.html">About</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="contact.html">Contact</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="cart.html">Cart</a>
+          </li>
+
+        </ul>
+      </div>
+
+    </div>
+  </nav>
+
+  <!-- Title -->
+  <h1 class="text-center mt-4">Accessories Shop</h1>
+
+  <p class="text-center">
+    Welcome to our Accessories Shop! We offer a wide range of accessories
+    to complement your style.
+  </p>
+  <!-- Main Categories -->
+  <div class="container mt-5">
+    <div class="row g-4">
+
+      <!-- Rings -->
+      <div class="col-md-4">
+        <div class="card product-card h-100">
+          <img src="../images/golden-ring.jpg" class="card-img-top" alt="Rings">
+
+          <div class="card-body">
+            <h5 class="card-title">Rings</h5>
+            <p class="card-text">
+              Elegant rings for every style and occasion and special moments.
+            </p>
+
+            <button
+  class="btn btn-dark"
+  onclick="addToCart('Elegant Ring', 15, '../images/elegant_ring.jpg')"
+>
+  Add to Cart
+</button>
+            <button
+              class="btn btn-dark"
+              onclick="showProducts('rings')"
+            >
+              View Rings
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Bracelets -->
+      <div class="col-md-4">
+        <div class="card product-card h-100">
+          <img src="../images/silver-bracelet.jpg" class="card-img-top" alt="Bracelets">
+
+          <div class="card-body">
+            <h5 class="card-title">Bracelets</h5>
+            <p class="card-text">
+              Stylish bracelets that complete your look and add a touch of elegance.
+            </p>
+
+            <button
+  class="btn btn-dark"
+  onclick="addToCart('Stylish Bracelet', 20, '../images/silver_bracelet.jpg')"
+>
+  Add to Cart
+</button>
+            <button
+              class="btn btn-dark"
+              onclick="showProducts('bracelets')"
+            >
+              View Bracelets
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Watches -->
+      <div class="col-md-4">
+        <div class="card product-card h-100">
+          <img src="../images/silver-watches.jpg" class="card-img-top" alt="Watches">
+
+          <div class="card-body">
+            <h5 class="card-title">Watches</h5>
+            <p class="card-text">
+              Classic and modern watches for every occasion.
+            </p>
+
+           <button
+  class="btn btn-dark"
+  onclick="addToCart('Classic Watch', 50, '../images/silver_watches.jpg')">
+  Add to Cart
+</button>
+            <button
+              class="btn btn-dark"
+              onclick="showProducts('watches')"
+            >
+              View Watches
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Handbags -->
+      <div class="col-md-4">
+        <div class="card product-card h-100">
+          <img src="../images/black-bag.jpg" class="card-img-top" alt="Handbags">
+
+          <div class="card-body">
+            <h5 class="card-title">Handbags</h5>
+            <p class="card-text">
+              Elegant handbags with beauty and functionality for every style.
+            </p>
+
+      <button class="btn btn-dark" onclick="addToCart('Black Handbag', 40, '../images/black_bag.jpg')">
+        Add to Cart
+      </button>
+            <button
+              class="btn btn-dark"
+              onclick="showProducts('handbags')"
+            >
+              View Handbags
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Hair Accessories -->
+      <div class="col-md-4">
+        <div class="card product-card h-100">
+          <img src="../images/hair-accessories.jpg" class="card-img-top" alt="Hair Accessories">
+
+          <div class="card-body">
+            <h5 class="card-title">Hair Accessories</h5>
+            <p class="card-text">
+              Beautiful clips and hair accessories for daily style.
+            </p>
+            <button class="btn btn-dark" onclick="addToCart('Pearl Hair Clip', 10, '../images/hair_accessories.jpg')">
+              Add to Cart
+            </button>
+            <button
+              class="btn btn-dark"
+              onclick="showProducts('hair-accessories')"
+            >
+              View Hair Accessories
+            </button>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+<!-- RINGS -->
+<div id="rings" class="product-list" style="display:none;">
+  <h2>Rings Collection</h2>
+  <div class="container">
+    <div class="row g-4">
+
+      <div class="col-md-4">
+        <div class="card h-100">
+          <img src="../images/elegant-ring.jpg" class="card-img-top">
+          <div class="card-body">
+            <h5>Elegant Silver Ring</h5>
+            <p>$15</p>
+            <button class="btn btn-dark"
+              onclick="addToCart('Elegant Silver Ring',15,'../images/elegant-ring.jpg')">
+              Add to Cart
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="card h-100">
+          <img src="../images/golden-ring.jpg" class="card-img-top">
+          <div class="card-body">
+            <h5>Gold Ring</h5>
+            <p>$25</p>
+            <button class="btn btn-dark"
+              onclick="addToCart('Gold Ring',25,'../images/golden-ring.jpg')">
+              Add to Cart
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="card h-100">
+          <img src="../images/featured-ring.jpg" class="card-img-top">
+          <div class="card-body">
+            <h5>Featured Ring</h5>
+            <p>$20</p>
+            <button class="btn btn-dark"
+              onclick="addToCart('Featured Ring',20,'../images/featured-ring.jpg')">
+              Add to Cart
+            </button>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+
+<!-- BRACELETS -->
+<div id="bracelets" class="product-list" style="display:none;">
+  <h2>Bracelets Collection</h2>
+  <div class="container">
+    <div class="row g-4">
+
+      <div class="col-md-4">
+        <div class="card h-100">
+          <img src="../images/silver-bracelet.jpg" class="card-img-top">
+          <div class="card-body">
+            <h5>Silver Bracelet</h5>
+            <p>$20</p>
+            <button class="btn btn-dark"
+              onclick="addToCart('Silver Bracelet',20,'../images/silver-bracelet.jpg')">
+              Add to Cart
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="card h-100">
+          <img src="../images/golden-braclete.jpg" class="card-img-top">
+          <div class="card-body">
+            <h5>Golden Bracelet</h5>
+            <p>$30</p>
+            <button class="btn btn-dark"
+              onclick="addToCart('Golden Bracelet',30,'../images/golden-braclete.jpg')">
+              Add to Cart
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="card h-100">
+          <img src="../images/featured-bracelets.jpg" class="card-img-top">
+          <div class="card-body">
+            <h5>Featured Bracelet</h5>
+            <p>$25</p>
+            <button class="btn btn-dark"
+              onclick="addToCart('Featured Bracelet',25,'../images/featured-bracelets.jpg')">
+              Add to Cart
+            </button>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+
+<!-- WATCHES -->
+<div id="watches" class="product-list" style="display:none;">
+  <h2>Watches Collection</h2>
+  <div class="container">
+    <div class="row g-4">
+
+      <div class="col-md-4">
+        <div class="card h-100">
+          <img src="../images/silver-watches.jpg" class="card-img-top">
+          <div class="card-body">
+            <h5>Classic Watch</h5>
+            <p>$50</p>
+            <button class="btn btn-dark"
+              onclick="addToCart('Classic Watch',50,'../images/silver-watches.jpg')">
+              Add to Cart
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="card h-100">
+          <img src="../images/golden-watches.jpg" class="card-img-top">
+          <div class="card-body">
+            <h5>Golden Watch</h5>
+            <p>$70</p>
+            <button class="btn btn-dark"
+              onclick="addToCart('Golden Watch',70,'../images/golden-watches.jpg')">
+              Add to Cart
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="card h-100">
+          <img src="../images/featured-watches.jpg" class="card-img-top">
+          <div class="card-body">
+            <h5>Featured Watch</h5>
+            <p>$60</p>
+            <button class="btn btn-dark"
+              onclick="addToCart('Featured Watch',60,'../images/featured-watches.jpg')">
+              Add to Cart
+            </button>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+
+<!-- HANDBAGS -->
+<div id="handbags" class="product-list" style="display:none;">
+  <h2>Handbags Collection</h2>
+  <div class="container">
+    <div class="row g-4">
+
+      <div class="col-md-4">
+        <div class="card h-100">
+          <img src="../images/black-bag.jpg" class="card-img-top">
+          <div class="card-body">
+            <h5>Black Bag</h5>
+            <p>$40</p>
+            <button class="btn btn-dark"
+              onclick="addToCart('Black Handbag',40,'../images/black-bag.jpg')">
+              Add to Cart
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="card h-100">
+          <img src="../images/single-shoulder.jpg" class="card-img-top">
+          <div class="card-body">
+            <h5>Shoulder Bag</h5>
+            <p>$55</p>
+            <button class="btn btn-dark"
+              onclick="addToCart('Shoulder Bag',55,'../images/single-shoulder.jpg')">
+              Add to Cart
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="card h-100">
+          <img src="../images/louis-bags.jpg" class="card-img-top">
+          <div class="card-body">
+            <h5>Luxury Tote</h5>
+            <p>$60</p>
+            <button class="btn btn-dark"
+              onclick="addToCart('Luxury Tote Bag',60,'../images/louis-bags.jpg')">
+              Add to Cart
+            </button>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+
+<!-- HAIR ACCESSORIES -->
+<div id="hair-accessories" class="product-list" style="display:none;">
+  <h2>Hair Accessories</h2>
+  <div class="container">
+    <div class="row g-4">
+
+      <div class="col-md-4">
+        <div class="card h-100">
+          <img src="../images/hair-accessories.jpg" class="card-img-top">
+          <div class="card-body">
+            <h5>Pearl Clip</h5>
+            <p>$10</p>
+            <button class="btn btn-dark"
+              onclick="addToCart('Pearl Clip',10,'../images/hair-accessories.jpg')">
+              Add to Cart
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="card h-100">
+          <img src="../images/hair-clips.jpg" class="card-img-top">
+          <div class="card-body">
+            <h5>Golden Headband</h5>
+            <p>$15</p>
+            <button class="btn btn-dark"
+              onclick="addToCart('Golden Headband',15,'../images/hair-clips.jpg')">
+              Add to Cart
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="card h-100">
+          <img src="../images/purple-clips.jpg" class="card-img-top">
+          <div class="card-body">
+            <h5>Heart Clip</h5>
+            <p>$12</p>
+            <button class="btn btn-dark"
+              onclick="addToCart('Heart Clip',12,'../images/purple-clips.jpg')">
+              Add to Cart
+            </button>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+<div class="container my-3 text-center">
+  <input 
+    type="text" 
+    id="search" 
+    class="form-control search-box mx-auto"
+    placeholder="🔎 Search products..."
+    onkeyup="searchProducts()"
+  >
+</div>
+
+<!-- SHOP BY CATEGORY -->
+<section class="container mt-5">
+
+  <h2 class="text-center mb-4">Shop by Category</h2>
+
+  <div class="row g-4">
+
+    <div class="col-md-3">
+      <div class="category-box text-center">
+        <h5>Rings</h5>
+        <p>Elegant and stylish rings</p>
+      </div>
+    </div>
+
+    <div class="col-md-3">
+      <div class="category-box text-center ">
+        <h5>Bracelets</h5>
+        <p>Beautiful bracelets for every look</p>
+      </div>
+    </div>
+
+    <div class="col-md-3">
+      <div class="category-box text-center ">
+        <h5>Watches</h5>
+        <p>Classic and modern watches</p>
+      </div>
+    </div>
+
+    <div class="col-md-3">
+      <div class="category-box text-center ">
+        <h5>Handbags</h5>
+        <p>Luxury and everyday handbags</p>
+      </div>
+    </div>
+
+  </div>
+
+</section>
+<!-- FOOTER -->
+<footer class="site-footer mt-5">
+
+  <div class="container py-5">
+    <div class="row g-4">
+
+      <!-- About -->
+      <div class="col-md-4">
+        <h4>Accessories Shop ✨</h4>
+        <p>
+          Elegant accessories for every style and every occasion.
+          Discover beauty in every detail.
+        </p>
+      </div>
+
+      <!-- Quick Links -->
+      <div class="col-md-4">
+        <h4>Quick Links</h4>
+
+        <p><a href="index.html">Home</a></p>
+        <p><a href="about.html">About</a></p>
+        <p><a href="contact.html">Contact</a></p>
+        <p><a href="cart.html">Cart</a></p>
+      </div>
+
+      <!-- Contact -->
+      <div class="col-md-4">
+        <h4>Contact Info</h4>
+
+        <p>Email: accessories@gmail.com</p>
+        <p>Phone: +93 700 123 456</p>
+        <p>Location: Herat, Afghanistan</p>
+      </div>
+
+    </div>
+
+    <hr>
+
+    <div class="text-center">
+      <p>© 2026 Accessories Shop | All Rights Reserved</p>
+    </div>
+
+  </div>
+
+</footer>
+
+  <!-- JS -->
+  <script src="/js/main.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,442 @@
+/* =======================
+   BASE STYLES
+======================= */
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #fffaf7;
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  text-align: center;
+  margin-top: 30px;
+  animation: fadeIn 1.5s;
+}
+
+h2 {
+  color: #333;
+  font-weight: bold;
+}
+
+/* =======================
+   FORM (CONTACT / GENERAL)
+======================= */
+
+form {
+  margin-top: 20px;
+}
+
+input,
+select {
+  padding: 8px;
+  width: 200px;
+}
+
+button {
+  padding: 8px 15px;
+  background-color: black;
+  color: white;
+  border: none;
+  transition: 0.3s;
+}
+
+button:hover {
+  transform: scale(1.05);
+}
+
+/* result text */
+#result {
+  margin-top: 15px;
+  font-weight: bold;
+}
+
+/* =======================
+   NAVBAR
+======================= */
+
+.navbar-brand {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.nav-link {
+  transition: 0.3s;
+}
+
+.nav-link:hover {
+  color: #c9a227 !important;
+}
+
+/* =======================
+   PRODUCTS
+======================= */
+
+.product-card {
+  border: none;
+  border-radius: 15px;
+  overflow: hidden;
+  transition: 0.3s;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+  display: flex;
+  flex-direction: column;
+}
+
+.product-card:hover {
+  transform: translateY(-8px);
+}
+
+.product-card img {
+  height: 250px;
+  object-fit: cover;
+}
+
+.product-list {
+  margin: 40px auto;
+  padding: 20px;
+  max-width: 900px;
+}
+
+.product-list h2 {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.product-list img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.product-list .card {
+  max-width: 300px;
+}
+
+.product-list .card-body {
+  text-align: center;
+}
+
+/* =======================
+   CATEGORY
+======================= */
+
+.category-box {
+  background: #fff;
+  padding: 25px;
+  border-radius: 15px;
+  height: 150px;
+  transition: 0.3s;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+}
+
+.category-box:hover {
+  transform: translateY(-8px);
+}
+
+.category-box h3 {
+  margin-bottom: 10px;
+}
+
+/* =======================
+   FOOTER
+======================= */
+
+.site-footer {
+  background: #111;
+  color: white;
+  margin-top: 70px;
+}
+
+.site-footer h4 {
+  margin-bottom: 20px;
+}
+
+.site-footer a {
+  color: #ddd;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.site-footer a:hover {
+  color: #c9a227;
+}
+
+.site-footer hr {
+  border-color: rgba(255,255,255,0.2);
+}
+
+/* =======================
+   ABOUT PAGE
+======================= */
+
+.about-section h2,
+.team-section h2 {
+  text-align: center;
+  font-size: 30px;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+.about-text {
+  text-align: center;
+  max-width: 700px;
+  margin: 0 auto 30px;
+  color: #666;
+  font-size: 15px;
+}
+
+.list-group-item {
+  border: none;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  padding: 15px 20px;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.04);
+  transition: 0.3s;
+}
+
+.list-group-item:hover {
+  transform: translateX(5px);
+}
+
+/* ABOUT CARDS */
+.about-card {
+  border: none;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  transition: 0.3s;
+  height: 100%;
+}
+
+.about-card:hover {
+  transform: translateY(-5px);
+}
+
+.about-card h6 {
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.about-card p {
+  font-size: 13px;
+  color: #666;
+  margin-bottom: 0;
+}
+
+/* TEAM */
+.team-card {
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  transition: 0.3s;
+}
+
+.team-card:hover {
+  transform: translateY(-5px);
+}
+
+.team-card img {
+  width: 95px;
+  height: 95px;
+  object-fit: cover;
+  margin-bottom: 15px;
+}
+
+.team-card h5 {
+  font-size: 18px;
+  margin-bottom: 8px;
+}
+
+.team-card p {
+  font-size: 14px;
+  color: #666;
+}
+
+/* =======================
+   CONTACT PAGE
+======================= */
+
+.contact-card {
+  background: white;
+  padding: 35px;
+  border-radius: 15px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+}
+
+.contact-card label {
+  font-weight: 500;
+  margin-bottom: 8px;
+}
+
+.contact-card button {
+  padding: 12px;
+  border-radius: 10px;
+  transition: 0.3s;
+}
+
+.contact-card button:hover {
+  transform: translateY(-2px);
+  background-color: #111;
+  color: #c9a227;
+}
+
+.contact-card input,
+.contact-card select,
+.contact-card textarea {
+  transition: 0.3s ease;
+}
+
+.contact-card .form-control:focus,
+.contact-card .form-select:focus {
+  border-color: #c9a227 !important;
+  box-shadow: 0 0 0 0.15rem rgba(201, 162, 39, 0.2) !important;
+  outline: none;
+}
+
+.contact-card .form-control:hover,
+.contact-card .form-select:hover {
+  border-color: #c9a227;
+}
+
+/* RESULT */
+.result-box {
+  margin-top: 20px;
+  text-align: center;
+  font-weight: 500;
+  color: #444;
+}
+
+/* CONTACT INFO */
+.info-box {
+  background: white;
+  padding: 25px;
+  border-radius: 15px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  transition: 0.3s;
+}
+
+.info-box:hover {
+  transform: translateY(-5px);
+}
+
+.info-box p {
+  color: #666;
+  margin-bottom: 0;
+}
+
+/* =======================
+   CART
+======================= */
+
+table {
+  border-radius: 15px;
+  overflow: hidden;
+}
+
+.table td,
+.table th {
+  vertical-align: middle;
+}
+
+.progress-bar {
+  font-weight: bold;
+}
+
+.card {
+  background-color: #f8f9fa;
+  border: 1px solid #ddd;
+}
+
+/* =======================
+   SEARCH BAR
+======================= */
+
+.search-box {
+  width: 50%;
+  border-radius: 25px;
+  padding: 12px 20px;
+  border: 2px solid #ddd;
+  transition: 0.3s;
+}
+
+.search-box:focus {
+  border-color: #c9a227;
+  box-shadow: 0 0 10px rgba(201, 162, 39, 0.3);
+  outline: none;
+}
+
+/* =======================
+   ANIMATIONS
+======================= */
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+
+/* =======================
+ /* RESPONSIVE FIX FOR CART PAGE */
+
+@media (max-width: 768px) {
+
+  /* table text smaller */
+  .table th,
+  .table td {
+    font-size: 14px;
+    padding: 10px 6px;
+  }
+
+  /* quantity buttons */
+  .input-group {
+    width: 110px !important;
+    margin: auto;
+    flex-wrap: nowrap;
+  }
+
+  .minus,
+  .plus {
+    min-width: 32px;
+    font-size: 14px;
+    padding: 4px;
+  }
+
+  .quantity {
+    min-width: 38px;
+    font-size: 14px;
+    text-align: center;
+    padding: 4px;
+  }
+
+  /* promo section */
+  .card .d-flex {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .card .d-flex button {
+    width: 100%;
+  }
+
+  /* summary card */
+  #cart-total {
+    font-size: 24px;
+  }
+
+  /* checkout button */
+  #checkout-btn {
+    width: 100%;
+  }
+
+  /* navbar better spacing */
+  .navbar-brand {
+    font-size: 18px;
+  }
+
+  /* footer */
+  footer {
+    font-size: 14px;
+    padding: 15px;
+  }
+}
